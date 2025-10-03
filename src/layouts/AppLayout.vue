@@ -1,15 +1,27 @@
 <template>
-    <div :class="bgClass" class="min-h-screen flex flex-col bg-cover bg-no-repeat">
-        <NavHeader />
-        <div class="flex-1 border">
+    <div :class="['min-h-screen', 'flex', 'flex-col', 'bg-cover', 'bg-no-repeat', bgClass]">
+        <Toast />
+        <div class="sm:block hidden">
+            <NavHeader />
+        </div>
+        <div class="flex-1">
             <slot />
         </div>
-        <NavFooter />
+        <div class="sm:block hidden">
+            <NavFooter />
+        </div>
     </div>
+
+    <!-- <div class="relative min-h-screen">
+        <div :class="['min-h-screen absolute inset-0 bg-cover bg-center transform scale-x-[-1]', bgClass]"></div>
+        <div class="relative z-10 flex flex-col">
+        </div>
+    </div> -->
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, onBeforeMount } from 'vue';
+import { Toast } from 'primevue';
 import NavFooter from '@/components/Nav/NavFooter.vue';
 import NavHeader from '@/components/Nav/NavHeader.vue';
 import useType from '@/composables/useType';
@@ -17,6 +29,24 @@ import useType from '@/composables/useType';
 const type = useType();
 
 const bgClass = computed(() => {
-    return type.type === 'recruiter' ? 'bg-[url("/images/recruiter.png")]' : 'bg-[url("/images/talent.jpg")]'
+    return type.type === "recruiter" ? "bg-[url('/images/recruiter.jpg')]" : "bg-[url('/images/talent.jpg')] bg-center"
 });
+
+onBeforeMount(() => {
+    const preloadImages = () => {
+        const recruiter = new Image();
+        recruiter.src = '/images/recruiter.png';
+
+        const talent = new Image();
+        talent.src = '/images/talent.jpg';
+    };
+
+    preloadImages();
+
+})
 </script>
+<style>
+* {
+    font-size: 14px;
+}
+</style>
