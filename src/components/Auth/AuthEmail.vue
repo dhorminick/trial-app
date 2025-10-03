@@ -22,7 +22,7 @@
 
 <script setup lang="ts">
 import { ref, computed, onBeforeMount, watch } from 'vue';
-import useAuthManager from '@/composables/useAuthmanager';
+import useAuthManager from '@/composables/useAuth';
 import useType from '@/composables/useType';
 import ButtonCustom from '@/components/Button/Button.vue';
 import InputText from 'primevue/inputtext';

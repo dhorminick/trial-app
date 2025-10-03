@@ -1,4 +1,4 @@
-import useAuthManager from "@/composables/useAuthmanager";
+import useAuthManager from "@/composables/useAuth";
 import useApi from "@/composables/useApi";
 
 export default function () {

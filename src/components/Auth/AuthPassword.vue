@@ -39,7 +39,7 @@
 import { ref, computed, watch } from 'vue';
 import Password from 'primevue/password';
 import Button from 'primevue/button';
-import useAuthManager from '@/composables/useAuthmanager';
+import useAuthManager from '@/composables/useAuth';
 import { useToast } from 'primevue';
 import useMethods from '@/composables/useMethods';
 import useType from '@/composables/useType';

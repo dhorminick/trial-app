@@ -48,7 +48,7 @@
 import useMethods from '@/composables/useMethods';
 import useType from '@/composables/useType';
 import Button from 'primevue/button';
-import useAuthManager from '@/composables/useAuthmanager';
+import useAuthManager from '@/composables/useAuth';
 import { InputOtp } from 'primevue';
 import { ref, watch } from 'vue';
 import { useToast } from 'primevue';
