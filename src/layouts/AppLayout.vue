@@ -1,5 +1,5 @@
 <template>
-    <div :class="['min-h-screen', 'flex', 'flex-col', 'bg-cover', 'bg-no-repeat', bgClass]">
+    <div :class="['min-h-[100dvh]', 'flex', 'flex-col', 'bg-cover', 'bg-no-repeat', bgClass]">
         <Toast />
         <div class="sm:block hidden">
             <NavHeader />
