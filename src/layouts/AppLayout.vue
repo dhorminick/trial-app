@@ -29,7 +29,7 @@ const bgClass = computed(() => {
 onBeforeMount(() => {
     const preloadImages = () => {
         const recruiter = new Image();
-        recruiter.src = '/images/recruiter.png';
+        recruiter.src = '/images/recruiter.jpg';
 
         const talent = new Image();
         talent.src = '/images/talent.jpg';
