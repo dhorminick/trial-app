@@ -89,8 +89,9 @@ const _verifyOTP = async (e: string, code: string) => {
     loading.value = true;
     const res = await verifyOTP({ email: e, otp: code });
     if (res && res.status) {
+        console.log(res)
         loading.value = false;
-        const status = res.status === 201 ? 'success' : 'error';
+        const status = res.status === 200 ? 'success' : 'error';
         toast.add({
             severity: status,
             summary: status.toUpperCase(), detail: res.message ?? 'An error occured', life: 3000

@@ -65,7 +65,7 @@ export default function () {
       const response = await api.post(
         "/auth/register",
         JSON.stringify({
-          contact: data.email,
+          email: data.email,
           password: data.password,
           userType: data.userType,
         })
