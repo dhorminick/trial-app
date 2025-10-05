@@ -4,8 +4,8 @@ import { defineStore } from "pinia";
 export const typeStore = defineStore(
   "typeManager",
   () => {
-    const type = ref("recruiter");
-    const color = ref("#EAA505");
+    const type = ref("talent");
+    const color = ref("#EB5757");
 
     function switchType(newType: string) {
       type.value = newType;

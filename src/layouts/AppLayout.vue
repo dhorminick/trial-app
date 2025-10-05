@@ -11,12 +11,6 @@
             <NavFooter />
         </div>
     </div>
-
-    <!-- <div class="relative min-h-screen">
-        <div :class="['min-h-screen absolute inset-0 bg-cover bg-center transform scale-x-[-1]', bgClass]"></div>
-        <div class="relative z-10 flex flex-col">
-        </div>
-    </div> -->
 </template>
 
 <script setup lang="ts">

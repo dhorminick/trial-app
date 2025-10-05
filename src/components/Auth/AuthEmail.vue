@@ -2,10 +2,10 @@
     <div>
         <h3 class="text-center font-bold text-[200%] sm:block hidden">Créer un compte</h3>
         <div class="flex border rounded-full p-[3px] my-[20px]">
-            <ButtonCustom label="Je suis un talent" :active="type.type === 'recruiter' ? true : false"
-                @clicked="type.switchType('recruiter')" />
-            <ButtonCustom label="Je suis un recruteur" :active="type.type === 'talent' ? true : false"
+            <ButtonCustom label="Je suis un talent" :active="type.type === 'talent' ? true : false"
                 @clicked="type.switchType('talent')" />
+            <ButtonCustom label="Je suis un recruteur" :active="type.type === 'recruiter' ? true : false"
+                @clicked="type.switchType('recruiter')" />
         </div>
         <form @submit.prevent="_preRegister(email)" class="flex flex-col gap-[15px]">
             <h4>Veuillez entrer votre adresse e-mail pour créer votre compte.</h4>
