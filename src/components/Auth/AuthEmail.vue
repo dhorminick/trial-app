@@ -37,7 +37,7 @@ const { preRegister } = useMethods()
 
 const loading = ref(false);
 const emit = defineEmits(['next']);
-const email = ref('john@company.com');
+const email = ref('');
 const isInvalid = ref(true)
 
 const _preRegister = async (e: string) => {

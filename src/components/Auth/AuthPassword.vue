@@ -93,7 +93,7 @@ const _verifyUser = async () => {
         const status = res.status === 201 ? 'success' : 'error';
         toast.add({
             severity: status,
-            summary: status.toUpperCase(), detail: res.message ?? 'An error occured', life: 3000
+            summary: status.toUpperCase(), detail: res.message ?? status === 'success' ? 'Authentication successful!' : 'An error occured', life: 3000
         });
 
         if (status === 'success') {
