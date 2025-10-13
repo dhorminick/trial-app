@@ -22,7 +22,7 @@
 
 <script setup lang="ts">
 import { ref, computed, onBeforeMount, watch } from 'vue';
-import useAuthManager from '@/composables/useAuth';
+// import useAuthManager from '@/composables/useAuth';
 import useType from '@/composables/useType';
 import ButtonCustom from '@/components/Button/Button.vue';
 import InputText from 'primevue/inputtext';
@@ -32,7 +32,7 @@ import useMethods from '@/composables/useMethods';
 
 const type = useType()
 const toast = useToast();
-const authManager = useAuthManager();
+// const authManager = useAuthManager();
 const { preRegister } = useMethods()
 
 const loading = ref(false);
